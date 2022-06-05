@@ -1,0 +1,17 @@
+D:\visua\Recipe\Recipe\bin\Debug\net6.0\Recipe.exe
+D:\visua\Recipe\Recipe\bin\Debug\net6.0\Recipe.deps.json
+D:\visua\Recipe\Recipe\bin\Debug\net6.0\Recipe.runtimeconfig.json
+D:\visua\Recipe\Recipe\bin\Debug\net6.0\Recipe.dll
+D:\visua\Recipe\Recipe\bin\Debug\net6.0\Recipe.pdb
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.csproj.AssemblyReference.cache
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.GeneratedMSBuildEditorConfig.editorconfig
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.AssemblyInfoInputs.cache
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.AssemblyInfo.cs
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.csproj.CoreCompileInputs.cache
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.dll
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\refint\Recipe.dll
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.pdb
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.genruntimeconfig.cache
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\ref\Recipe.dll
+D:\visua\Recipe\Recipe\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\visua\Recipe\Recipe\obj\Debug\net6.0\Recipe.csproj.CopyComplete

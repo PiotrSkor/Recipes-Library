@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "epUu0g8ocCuyKYYDOMy7YTpuIO7qOT3YcS34KKfrVrGR+rMP/d4QLWJsc3ghx7bDcoHU7VOfQpkrrj6ix8tApg==",
+  "success": true,
+  "projectFilePath": "D:\\visua\\Recipe\\Recipe\\Recipe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pskor\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
