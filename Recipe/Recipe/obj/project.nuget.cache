@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bIGZcw2fVZBZvvNDhjZqKOZqTE8dLD27+1jnteFxLD5lUG9t8qgQ79WWkwGqmPpjxy3mpi/FQezP0dus/JUPBg==",
+  "dgSpecHash": "3l5jN8jVUidMBGVWTsgcpZOHJoP/YY3Jo2wBOX+dccCyWFe3P1shQxjGyf5j9nfHu6FTkheKNX+y/Vi6IABA6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Piotr\\Source\\Repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj",
+  "projectFilePath": "C:\\Users\\Piotr\\source\\repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Piotr\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",

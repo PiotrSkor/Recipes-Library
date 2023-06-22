@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Piotr\\Source\\Repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj": {}
+    "C:\\Users\\Piotr\\source\\repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Piotr\\Source\\Repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj": {
+    "C:\\Users\\Piotr\\source\\repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Piotr\\Source\\Repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj",
+        "projectUniqueName": "C:\\Users\\Piotr\\source\\repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj",
         "projectName": "Recipe",
-        "projectPath": "C:\\Users\\Piotr\\Source\\Repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj",
+        "projectPath": "C:\\Users\\Piotr\\source\\repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj",
         "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Piotr\\Source\\Repos\\Recipes-Library\\Recipe\\Recipe\\obj\\",
+        "outputPath": "C:\\Users\\Piotr\\source\\repos\\Recipes-Library\\Recipe\\Recipe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
