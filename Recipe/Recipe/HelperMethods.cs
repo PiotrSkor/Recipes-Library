@@ -4,25 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Recipe.Path;
+using Recipe.Services;
 
 namespace Recipe
 {
 
 
-    class HelperMethods
+    class HelperMethods : Paths
     {
-        
- 
+        public JsonSerialize JsonSerialize { get; }
+
+        public HelperMethods(Recipe.Services.JsonSerialize jsonSerialize)
+        {
+            JsonSerialize = jsonSerialize;
+        }
+
         public static void AddRecipeToListShowRecipe()
         {
 
-            List<string> listOfProducts = new List<string>();
-            listOfProducts.Add("****************************************************");
+
+            List<string> listOfProductsToTxt = new List<string>();
+            List<string> listOfProductsToJson = new List<string>();
+            listOfProductsToTxt.Add("****************************************************");
             Console.WriteLine("Podaj nazwę przepisu: ");
             var NameOfRecipe = Console.ReadLine();
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("----------" + NameOfRecipe + "----------");
-            listOfProducts.Add(Convert.ToString(sb));
+            listOfProductsToTxt.Add(Convert.ToString(sb)!);
+            listOfProductsToJson.Add(Convert.ToString(NameOfRecipe)!);
 
 
 
@@ -41,7 +51,7 @@ namespace Recipe
                     Console.Write("\tPodaj gramature produktu: ");
                     var valueOfProducts = Console.ReadLine();
                     stringItem.Append(item + " - " + valueOfProducts);
-                    listOfProducts.Add(Convert.ToString(stringItem));
+                    listOfProductsToJson.Add(Convert.ToString(stringItem)!);
                 }
 
             }
@@ -50,35 +60,24 @@ namespace Recipe
                 Console.WriteLine("Podaj prawidłową liczbę");
                 goto ValueRecipe;
             }
-            listOfProducts.Add("****************************************************");
-            listOfProducts.Add("");
-            var filepath = @"D:\visua\Recipe\Przepisy\Recipe.txt";
+            listOfProductsToJson.Add("****************************************************");
+            listOfProductsToJson.Add("");
+            var filepath = pathTxt;
 
-            File.AppendAllLines(filepath, listOfProducts);
+            File.AppendAllLines(filepath, listOfProductsToJson);
             Console.WriteLine("Dodano: ");
-            foreach (var items in listOfProducts)
+            foreach (var items in listOfProductsToJson)
             {
                 Console.WriteLine(items);
             }
 
+
+            Services.JsonSerialize.JsonSerialized(listOfProductsToJson);
+
             
-
-            string recipeeeeee = JsonConvert.SerializeObject(listOfProducts);
-            File.WriteAllText(@"D:\visua\Recipe\Przepisy\recipeeeeee.json", recipeeeeee);
             
-
-
-
         }
 
-        public static void ShowRecipe()
-        {
-            var filepath = @"D:\visua\Recipe\Przepisy\Recipe.txt";
-            var textInside = File.ReadAllText(filepath);
-            Console.WriteLine(textInside);
-
-
-        }
 
         public static void SearchRecipeIngredient()
         {
@@ -92,7 +91,7 @@ namespace Recipe
 
         public static void DeleteRecipe()
         {
-            var filepath = @"D:\visua\Recipe\Przepisy\Recipe.txt";
+            var filepath =pathTxt;
             var textInside = File.ReadAllText(filepath);
 
             

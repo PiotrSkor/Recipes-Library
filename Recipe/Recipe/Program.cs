@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Recipe.Methods;
 using static Recipe.HelperMethods;
 
 namespace Recipe
@@ -25,31 +26,25 @@ namespace Recipe
             switch (value)
             {
                 case 1:
-                    HelperMethods.AddRecipeToListShowRecipe();
+                    AddRecipe.AddRecipeMethod();
                     Console.WriteLine();
-                    
                     goto Beginning;
-
-                    break;
                 case 2:
-                    
-                    HelperMethods.ShowRecipe();
+                    ShowRecipes.ShowRecipeMethod();
                     Console.WriteLine();
-                    
                     goto Beginning;
-                    break;
                 case 3:
                     HelperMethods.SearchRecipeName();
                     Console.WriteLine();
                     goto Beginning;
-                    break;
                 case 4:
                     HelperMethods.SearchRecipeIngredient();
                     Console.WriteLine();
                     goto Beginning;
-                    break;
+                    case 5:
+                        Console.WriteLine("W trakcie pracy\n");
+                    goto Beginning;
                 case 0:
-
                     break;
             }
         }

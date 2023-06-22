@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "epUu0g8ocCuyKYYDOMy7YTpuIO7qOT3YcS34KKfrVrGR+rMP/d4QLWJsc3ghx7bDcoHU7VOfQpkrrj6ix8tApg==",
+  "dgSpecHash": "bIGZcw2fVZBZvvNDhjZqKOZqTE8dLD27+1jnteFxLD5lUG9t8qgQ79WWkwGqmPpjxy3mpi/FQezP0dus/JUPBg==",
   "success": true,
-  "projectFilePath": "D:\\visua\\Recipe\\Recipe\\Recipe.csproj",
+  "projectFilePath": "C:\\Users\\Piotr\\Source\\Repos\\Recipes-Library\\Recipe\\Recipe\\Recipe.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pskor\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Piotr\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.15\\microsoft.netcore.app.host.win-x64.6.0.15.nupkg.sha512"
   ],
   "logs": []
 }
