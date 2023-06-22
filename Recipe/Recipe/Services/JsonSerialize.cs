@@ -22,7 +22,6 @@ namespace Recipe.Services
                 var recipeToSerialize = JsonConvert.SerializeObject(obj);
                 var textFromJson = File.ReadAllText(pathJson);
                 textFromJson = textFromJson.TrimEnd(']');
-                
                 textFromJson += ",";
                 textFromJson += recipeToSerialize + "]";
                 File.WriteAllText(pathJson, textFromJson);

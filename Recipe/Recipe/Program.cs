@@ -7,8 +7,6 @@ namespace Recipe
 {
     public class Program 
     {
-
-
         public static void Main(string [] args)
         {
         Beginning:
@@ -34,7 +32,7 @@ namespace Recipe
                     Console.WriteLine();
                     goto Beginning;
                 case 3:
-                    HelperMethods.SearchRecipeName();
+                    SearchRecipeForName.SearchRecipeForNameMethod();
                     Console.WriteLine();
                     goto Beginning;
                 case 4:

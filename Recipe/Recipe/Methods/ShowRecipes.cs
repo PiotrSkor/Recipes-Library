@@ -18,14 +18,14 @@ namespace Recipe.Methods
             foreach (var item in recipeDetails)
             {
                 StringBuilder sb = new StringBuilder();
+                sb.AppendLine("--------------------------");
                 sb.AppendLine("Nazwa: " + item.RecipeName);
-                sb.AppendLine("");
+                sb.AppendLine("--------------------------");
                 sb.AppendLine("Opis przygotowania: " + item.RecipeDescription);
                 sb.AppendLine("Lista składników: " + item.Ingredients);
+                sb.AppendLine("--------------------------");
                 Console.WriteLine(sb);
             }
-
-            
         }
     }
 }
