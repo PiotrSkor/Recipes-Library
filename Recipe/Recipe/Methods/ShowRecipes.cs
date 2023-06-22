@@ -12,13 +12,20 @@ namespace Recipe.Methods
     {
         public static void ShowRecipeMethod()
         {
-            JsonDeserialize.JsonDeserializeMethod();
-            RecipeDetails recipeDetails = new RecipeDetails();
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Nazwa: "+recipeDetails.RecipeName);
-            sb.AppendLine("");
-            sb.AppendLine("Opis przygotowania: "+recipeDetails.RecipeDescription);
-            sb.AppendLine("Lista składników: "+recipeDetails.Ingredients);
+            List<RecipeDetails> recipeDetails = new List<RecipeDetails>();
+            recipeDetails = JsonDeserialize.JsonDeserializeMethod();
+
+            foreach (var item in recipeDetails)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("Nazwa: " + item.RecipeName);
+                sb.AppendLine("");
+                sb.AppendLine("Opis przygotowania: " + item.RecipeDescription);
+                sb.AppendLine("Lista składników: " + item.Ingredients);
+                Console.WriteLine(sb);
+            }
+
+            
         }
     }
 }

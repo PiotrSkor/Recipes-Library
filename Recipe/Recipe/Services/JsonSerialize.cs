@@ -8,12 +8,26 @@ using System.Threading.Tasks;
 
 namespace Recipe.Services
 {
-    public class JsonSerialize:Paths
+    public class JsonSerialize : Paths
     {
         public static void JsonSerialized(object obj)
         {
-            var recipeToSerialize = JsonConvert.SerializeObject(obj);
-            File.AppendAllText(pathJson, recipeToSerialize);
+            if (!File.Exists(pathJson))
+            {
+                var recipeToSerialize = JsonConvert.SerializeObject(obj);
+                File.AppendAllText(pathJson,"[" +recipeToSerialize+ "]");
+            }
+            else
+            {
+                var recipeToSerialize = JsonConvert.SerializeObject(obj);
+                var textFromJson = File.ReadAllText(pathJson);
+                textFromJson = textFromJson.TrimEnd(']');
+                
+                textFromJson += ",";
+                textFromJson += recipeToSerialize + "]";
+                File.WriteAllText(pathJson, textFromJson);
+            }
+
         }
     }
 }

@@ -11,11 +11,12 @@ namespace Recipe.Services
 {
     public class JsonDeserialize:Paths
     {
-        public static void JsonDeserializeMethod() 
+        public static List<RecipeDetails> JsonDeserializeMethod() 
         {
             string json = File.ReadAllText(pathJson);
-            RecipeDetails recipe = new RecipeDetails();
-            recipe = JsonConvert.DeserializeObject<RecipeDetails>(json)!;
+            var recipes = JsonConvert.DeserializeObject<List<RecipeDetails>>(json)!;
+            
+            return recipes;
         }
         
     }
