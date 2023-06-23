@@ -14,6 +14,7 @@ namespace Recipe.Methods
     {
         public static void DeleteRecipeForNameMethod()
         {
+            
             List<RecipeDetails> recipeDetails = new List<RecipeDetails>();
             recipeDetails = JsonDeserialize.JsonDeserializeMethod();
             Console.WriteLine("Podaj nazwę przepisu do usunięcia: ");
@@ -21,19 +22,29 @@ namespace Recipe.Methods
             Console.Clear();
             Console.WriteLine("Trwa wyszukiwanie...");
             Thread.Sleep(1000);
+            int i = recipeDetails.Count;
+            int i2 = 0;
             foreach (var item in recipeDetails)
             {
                 if (item.RecipeName.Contains(UserInput!))
                 {
                     recipeDetails.RemoveAll(item => item.RecipeName.Contains(UserInput!));
                     Console.WriteLine("Przepis został usunięty");
+                    break;
+                    
                 }
                 else
                 {
-                    Console.WriteLine("Brak przepisu w bazie");
-                    break;
+                    i2++;   
+                    if (i==i2)
+                    {
+                        Console.WriteLine($"Brak przepisu o nazwie \"{UserInput}\" do usunięcia");
+                    }
                 }
+
             }
+
+            
 
             File.WriteAllText(pathJson, string.Empty);
             var recipeToSerialize = JsonConvert.SerializeObject(recipeDetails);

@@ -32,10 +32,21 @@ namespace Recipe.Methods
                     {
                         Console.WriteLine($"Podaj {i + 1} produkt: ");
                         string item = Console.ReadLine()!;
+                    IngredientsValue:
                         Console.Write("\tPodaj gramature produktu: ");
                         string value = Console.ReadLine()!;
 
-                        stringItem.Append(i+1 +"."+ item + " - " + value+"g ");
+                        if (int.TryParse(value, out int idd))
+                        {
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nPodaj prawidłową wartość");
+                            goto IngredientsValue;
+                        }
+
+                        stringItem.Append(i+1 +"."+ item + " - " + value+" g ");
                     }
 
                 }
