@@ -13,11 +13,17 @@ namespace Recipe.Services
     {
         public static List<RecipeDetails> JsonDeserializeMethod() 
         {
-            string json = File.ReadAllText(pathJson);
-            var recipes = JsonConvert.DeserializeObject<List<RecipeDetails>>(json)!;
-            
-            return recipes;
+            if (!File.Exists(pathJson))
+            {
+                Console.WriteLine("Brak przepisów do wyświetlenia");
+            }
+            else
+            {
+                string json = File.ReadAllText(pathJson);
+                var recipes = JsonConvert.DeserializeObject<List<RecipeDetails>>(json)!;
+                return recipes;
+            }
+            return null!;
         }
-        
     }
 }

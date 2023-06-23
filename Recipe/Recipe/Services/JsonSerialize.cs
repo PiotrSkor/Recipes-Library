@@ -15,7 +15,7 @@ namespace Recipe.Services
             if (!File.Exists(pathJson))
             {
                 var recipeToSerialize = JsonConvert.SerializeObject(obj);
-                File.AppendAllText(pathJson,"[" +recipeToSerialize+ "]");
+                File.AppendAllText(pathJson, "[" + recipeToSerialize + "]");
             }
             else
             {

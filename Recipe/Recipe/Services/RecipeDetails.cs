@@ -11,7 +11,6 @@ namespace Recipe.Services
         public string RecipeName { get; set; } = default!;
         public string RecipeDescription { get;set; } = default!;
         public string Ingredients { get; set; } = default!;
-        public string IngredientsValue { get; set; } = default!;
 
     }
 }

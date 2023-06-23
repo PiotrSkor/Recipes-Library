@@ -15,7 +15,7 @@ namespace Recipe
             Console.WriteLine("2.Wyświetlić przepis");
             Console.WriteLine("3.Wyszukać przepis (nazwa)");
             Console.WriteLine("4.Wyszukać przepis (składnik)");
-            Console.WriteLine("5.Usunąć przepis (numery)");
+            Console.WriteLine("5.Usunąć przepis (nazwa)");
             Console.WriteLine("0.Zamknij program");
 
             var UserInput = Console.ReadLine();
@@ -36,11 +36,12 @@ namespace Recipe
                     Console.WriteLine();
                     goto Beginning;
                 case 4:
-                    HelperMethods.SearchRecipeIngredient();
+                    SearchRecipeForIngredient.SearchRecipeIngredientMethod();
                     Console.WriteLine();
                     goto Beginning;
                     case 5:
-                        Console.WriteLine("W trakcie pracy\n");
+                    DeleteRecipeForName.DeleteRecipeForNameMethod();
+                    Console.WriteLine("");
                     goto Beginning;
                 case 0:
                     break;

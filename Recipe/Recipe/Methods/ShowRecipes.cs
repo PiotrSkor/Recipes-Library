@@ -1,4 +1,5 @@
-﻿using Recipe.Path;
+﻿using Recipe.Interfaces;
+using Recipe.Path;
 using Recipe.Services;
 using System;
 using System.Collections.Generic;
@@ -8,23 +9,19 @@ using System.Threading.Tasks;
 
 namespace Recipe.Methods
 {
-    public class ShowRecipes : Paths
+    public class ShowRecipes : Paths, IRecipeLibraryItems
     {
         public static void ShowRecipeMethod()
         {
-            List<RecipeDetails> recipeDetails = new List<RecipeDetails>();
-            recipeDetails = JsonDeserialize.JsonDeserializeMethod();
-
-            foreach (var item in recipeDetails)
+            if (File.Exists(pathJson))
             {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine("--------------------------");
-                sb.AppendLine("Nazwa: " + item.RecipeName);
-                sb.AppendLine("--------------------------");
-                sb.AppendLine("Opis przygotowania: " + item.RecipeDescription);
-                sb.AppendLine("Lista składników: " + item.Ingredients);
-                sb.AppendLine("--------------------------");
-                Console.WriteLine(sb);
+                List<RecipeDetails> recipeDetails = new List<RecipeDetails>();
+                recipeDetails = JsonDeserialize.JsonDeserializeMethod();
+                IRecipeLibraryItems.RecipeLibraryItems(recipeDetails);
+            }
+            else
+            {
+                Console.WriteLine("Brak przepisów do wyświetlenia");
             }
         }
     }

@@ -35,8 +35,7 @@ namespace Recipe.Methods
                         Console.Write("\tPodaj gramature produktu: ");
                         string value = Console.ReadLine()!;
 
-                        stringItem.Append(i+1 +"."+ item + " ");
-                        stringValue.Append(i+1 + "." + value + "g ");
+                        stringItem.Append(i+1 +"."+ item + " - " + value+"g ");
                     }
 
                 }
@@ -48,7 +47,6 @@ namespace Recipe.Methods
                 Console.WriteLine("Podaj opis przygotowania potrawy:");
                 recipe.RecipeDescription = Console.ReadLine()!;
                 recipe.Ingredients = stringItem.ToString();
-                recipe.IngredientsValue = stringValue.ToString();
             }
 
             Services.JsonSerialize.JsonSerialized(recipe);
