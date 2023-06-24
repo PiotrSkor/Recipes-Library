@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Recipe.Interfaces;
 using Recipe.Path;
 using Recipe.Services;
 using System;
@@ -10,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Recipe.Methods
 {
-    public class DeleteRecipeForName : Paths, IRecipeLibraryItems
+    public class DeleteRecipeForName : Paths
     {
+
         public static void DeleteRecipeForNameMethod()
         {
-            
             List<RecipeDetails> recipeDetails = new List<RecipeDetails>();
             recipeDetails = JsonDeserialize.JsonDeserializeMethod();
             Console.WriteLine("Podaj nazwę przepisu do usunięcia: ");
@@ -31,7 +30,6 @@ namespace Recipe.Methods
                     recipeDetails.RemoveAll(item => item.RecipeName.Contains(UserInput!));
                     Console.WriteLine("Przepis został usunięty");
                     break;
-                    
                 }
                 else
                 {
@@ -41,16 +39,12 @@ namespace Recipe.Methods
                         Console.WriteLine($"Brak przepisu o nazwie \"{UserInput}\" do usunięcia");
                     }
                 }
-
             }
-
-            
-
             File.WriteAllText(pathJson, string.Empty);
             var recipeToSerialize = JsonConvert.SerializeObject(recipeDetails);
             File.WriteAllText(pathJson, recipeToSerialize);
-
-
         }
+
+        
     }
 }

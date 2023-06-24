@@ -1,5 +1,4 @@
-﻿using Recipe.Interfaces;
-using Recipe.Services;
+﻿using Recipe.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,16 +18,21 @@ namespace Recipe.Methods
             Console.Clear();
             Console.WriteLine("Trwa wyszukiwanie...");
             Thread.Sleep(1000);
+            int i = recipeDetails.Count;
+            int i2 = 0;
             foreach (var item in recipeDetails)
             {
                 if (item.RecipeName.Contains(UserInput!))
                 {
-                    IRecipeLibraryItems.RecipeLibraryItems(recipeDetails);
+                    RecipeLibraryItems.RecipeLibraryItemsMethod(item);
                 }
                 else
                 {
-                    Console.WriteLine($"Brak przepisu o nazwie \"{UserInput}\"");
-                    break;
+                    i2++;
+                    if (i == i2)
+                    {
+                        Console.WriteLine($"Brak przepisu o nazwie \"{UserInput}\"");
+                    }
                 }
             }
         }

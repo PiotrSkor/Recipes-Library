@@ -1,5 +1,4 @@
-﻿using Recipe.Interfaces;
-using Recipe.Services;
+﻿using Recipe.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Recipe.Methods
 {
-    public class SearchRecipeForIngredient: IRecipeLibraryItems
+    public class SearchRecipeForIngredient
     {
         public static void SearchRecipeIngredientMethod()
         {
@@ -19,16 +18,21 @@ namespace Recipe.Methods
             Console.Clear();
             Console.WriteLine("Trwa wyszukiwanie...");
             Thread.Sleep(1000);
+            int i = recipeDetails.Count;
+            int i2 = 0;
             foreach (var item in recipeDetails)
             {
                 if (item.Ingredients.Contains(UserInput!))
                 {
-                    IRecipeLibraryItems.RecipeLibraryItems(recipeDetails);
+                    RecipeLibraryItems.RecipeLibraryItemsMethod(item);
                 }
                 else
                 {
-                    Console.WriteLine($"Brak przepisu ze składnikiem \"{UserInput}\"");
-                    break;
+                    i2++;
+                    if (i == i2)
+                    {
+                        Console.WriteLine($"Brak przepisu ze składnikiem \"{UserInput}\"");
+                    }
                 }
             }
         }

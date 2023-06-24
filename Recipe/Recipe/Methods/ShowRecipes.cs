@@ -1,5 +1,4 @@
-﻿using Recipe.Interfaces;
-using Recipe.Path;
+﻿using Recipe.Path;
 using Recipe.Services;
 using System;
 using System.Collections.Generic;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Recipe.Methods
 {
-    public class ShowRecipes : Paths, IRecipeLibraryItems
+    public class ShowRecipes : Paths
     {
         public static void ShowRecipeMethod()
         {
@@ -17,7 +16,7 @@ namespace Recipe.Methods
             {
                 List<RecipeDetails> recipeDetails = new List<RecipeDetails>();
                 recipeDetails = JsonDeserialize.JsonDeserializeMethod();
-                IRecipeLibraryItems.RecipeLibraryItems(recipeDetails);
+                RecipeLibraryItems.RecipeLibraryShowRecipesMethod(recipeDetails);
             }
             else
             {
