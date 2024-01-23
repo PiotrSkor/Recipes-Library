@@ -21,6 +21,10 @@ namespace Recipe.Methods
             Console.Clear();
             Console.WriteLine("Trwa wyszukiwanie...");
             Thread.Sleep(1000);
+            if (recipeDetails != null)
+            {
+
+            
             int i = recipeDetails.Count;
             int i2 = 0;
             foreach (var item in recipeDetails)
@@ -43,6 +47,7 @@ namespace Recipe.Methods
             File.WriteAllText(pathJson, string.Empty);
             var recipeToSerialize = JsonConvert.SerializeObject(recipeDetails);
             File.WriteAllText(pathJson, recipeToSerialize);
+        }
         }
 
         

@@ -18,22 +18,26 @@ namespace Recipe.Methods
             Console.Clear();
             Console.WriteLine("Trwa wyszukiwanie...");
             Thread.Sleep(1000);
-            int i = recipeDetails.Count;
-            int i2 = 0;
-            foreach (var item in recipeDetails)
+            if (recipeDetails != null)
             {
-                if (item.Ingredients.Contains(UserInput!))
+                int i = recipeDetails.Count;
+                int i2 = 0;
+                foreach (var item in recipeDetails)
                 {
-                    RecipeLibraryItems.RecipeLibraryItemsMethod(item);
-                }
-                else
-                {
-                    i2++;
-                    if (i == i2)
+                    if (item.Ingredients.Contains(UserInput!))
                     {
-                        Console.WriteLine($"Brak przepisu ze składnikiem \"{UserInput}\"");
+                        RecipeLibraryItems.RecipeLibraryItemsMethod(item);
+                    }
+                    else
+                    {
+                        i2++;
+                        if (i == i2)
+                        {
+                            Console.WriteLine($"Brak przepisu ze składnikiem \"{UserInput}\"");
+                        }
                     }
                 }
+            
             }
         }
     }
